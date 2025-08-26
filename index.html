@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POP | Recebimento de Compras</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Warm Neutrals (Stone, Amber/Orange) -->
+    <!-- Application Structure Plan: A single-page application with a fixed navigation menu. The page is divided into two main sections: "Compras Nacionais" and "Compras Importadas". All content is immediately visible, providing a static, easy-to-read document format. This design is ideal for printing or quick linear reading without any interactive elements to hide information. -->
+    <!-- Visualization & Content Choices: Report Info: SOP for National and Imported Purchases -> Goal: Organize & Detail -> Viz/Presentation: Plain text, detailed lists, flowcharts -> Interaction: Smooth scrolling navigation -> Justification: This design simplifies the user experience by presenting all information upfront. It removes complex interactions, making the document universally accessible and easy to navigate in a linear fashion, ideal for training or reference in any environment. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800">
+
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-stone-200">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-lg font-bold text-stone-700">POP - Recebimento de Compras</h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#procedimento-nacional" class="text-stone-600 hover:bg-stone-200 hover:text-stone-900 px-3 py-2 rounded-md text-sm font-medium">Compras Nacionais</a>
+                        <a href="#procedimento-importado" class="text-stone-600 hover:bg-stone-200 hover:text-stone-900 px-3 py-2 rounded-md text-sm font-medium">Compras Importadas</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+
+        <section id="overview" class="text-center mb-16 p-6 bg-white rounded-lg shadow-sm border border-stone-200">
+            <h2 class="text-3xl font-bold tracking-tight text-amber-700 sm:text-4xl">Procedimento Operacional Padrão (POP)</h2>
+            <p class="mt-4 max-w-3xl mx-auto text-lg text-stone-600">Este guia padroniza o processo de recebimento de compras, garantindo conformidade, integridade e rastreabilidade dos materiais.</p>
+            <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-stone-200">
+                    <h3 class="text-xl font-semibold text-stone-800">🎯 Objetivo</h3>
+                    <p class="mt-2 text-stone-600">Padronizar o processo de recebimento de compras nacionais e importadas, garantindo a correta conferência documental e física, assegurando conformidade, integridade e rastreabilidade dos materiais.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-stone-200">
+                    <h3 class="text-xl font-semibold text-stone-800">👤 Responsáveis</h3>
+                    <ul class="mt-2 text-stone-600 list-disc list-inside space-y-1 text-left">
+                        <li><strong>Equipe de Recebimento/Almoxarifado:</strong> Responsável pela conferência física e documental.</li>
+                        <li><strong>Setor de Compras:</strong> Responsável por tratativas com fornecedores.</li>
+                        <li><strong>Comércio Exterior/Despachante:</strong> Responsável pela documentação de importação e liberação aduaneira.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <hr class="border-stone-200 my-16">
+
+        <section id="procedimento-nacional" class="bg-white rounded-lg shadow-sm border border-stone-200 p-6 mb-8">
+            <h2 class="text-2xl font-bold text-amber-700">Procedimento – Compras Nacionais</h2>
+            <div class="mt-8 space-y-6">
+                <div class="bg-stone-50 rounded-lg shadow-inner border border-stone-200 overflow-hidden p-6">
+                    <h3 class="text-xl font-semibold text-amber-700">1. Conferência Inicial e Prosseguimento</h3>
+                    <ul class="mt-2 text-stone-600 list-disc list-inside space-y-2">
+                        <li><strong>No recebimento:</strong> Verifique a Nota Fiscal x Produto Físico (quantidade, SKU e integridade).</li>
+                        <li><strong>Se houver conformidade:</strong> Confira a Ordem de Compra (OC).</li>
+                        <li><strong>Conclua a OC:</strong> Se a Nota Fiscal, o Produto Físico e a Ordem de Compra estiverem em conformidade, conclua a OC e registre o recebimento no sistema.</li>
+                        <li><strong>Depósito:</strong> O produto será lançado no depósito INB.AT.</li>
+                        <li><strong>Armazenagem:</strong> Movimente o item para o destino final.</li>
+                    </ul>
+                </div>
+                <div class="bg-stone-50 rounded-lg shadow-inner border border-stone-200 overflow-hidden p-6">
+                    <h3 class="text-xl font-semibold text-amber-700">2. Tratativa de Divergências</h3>
+                    <h4 class="text-lg font-semibold text-stone-800">Em caso de divergência de quantidade ou SKU:</h4>
+                    <ul class="mt-2 text-stone-600 list-disc list-inside space-y-1">
+                        <li>Comunique imediatamente o Setor de Compras.</li>
+                        <li>Solicite o cancelamento e a reemissão da Nota Fiscal.</li>
+                        <li>Se não for possível a emissão imediata, recuse a mercadoria.</li>
+                    </ul>
+                </div>
+                <div class="bg-stone-50 rounded-lg shadow-inner border border-stone-200 overflow-hidden p-6">
+                    <h3 class="text-xl font-semibold text-amber-700">3. Recebimento Parcial</h3>
+                     <p class="text-stone-600">Se a Nota Fiscal e o Produto Físico estiverem corretos, mas não corresponderem integralmente à Ordem de Compra:</p>
+                     <ul class="mt-2 text-stone-600 list-disc list-inside space-y-1">
+                        <li>Comunique o Setor de Compras para obter autorização.</li>
+                        <li>Registre na OC a ocorrência, seguindo o padrão: "RECEBIDO PARCIALMENTE – PCAL0002 – 500 UNIDADES – 20/08/2025".</li>
+                        <li>Mantenha a OC aberta até a chegada do saldo pendente.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="procedimento-importado" class="bg-white rounded-lg shadow-sm border border-stone-200 p-6 mb-8">
+            <h2 class="text-2xl font-bold text-amber-700">Procedimento – Compras Importadas</h2>
+            <div class="mt-8 space-y-6">
+                <div class="bg-stone-50 rounded-lg shadow-inner border border-stone-200 overflow-hidden p-6">
+                    <h3 class="text-xl font-semibold text-amber-700">1. Conferência Documental e Preparação</h3>
+                    <h4 class="text-lg font-semibold text-stone-800">Documentos a verificar:</h4>
+                    <ul class="mt-2 text-stone-600 list-disc list-inside space-y-1">
+                        <li>Packing List.</li>
+                        <li>Nota Fiscal de Entrada.</li>
+                    </ul>
+                    <h4 class="text-lg font-semibold text-stone-800 mt-4">Preparação para Conferência:</h4>
+                    <ul class="mt-2 text-stone-600 list-disc list-inside space-y-1">
+                        <li>Atualize a planilha de conferência.</li>
+                        <li>Emita etiquetas antecipadamente para vasos.</li>
+                        <li>Para insumos/cubas, separe amostras de cada SKU para conferência.</li>
+                        <li>Mantenha a packing list impressa.</li>
+                        <li>Realize a conferência sempre em dupla.</li>
+                    </ul>
+                </div>
+                <div class="bg-stone-50 rounded-lg shadow-inner border border-stone-200 overflow-hidden p-6">
+                    <h3 class="text-xl font-semibold text-amber-700">2. Conferência Física</h3>
+                     <p class="text-stone-600">Realize a inspeção física comparando a Nota Fiscal de Entrada com o Produto Físico, verificando:</p>
+                     <ul class="mt-2 text-stone-600 list-disc list-inside space-y-1">
+                        <li>Quantidade recebida.</li>
+                        <li>SKU/código de importação.</li>
+                        <li>Integridade da carga.</li>
+                        <li>Conferência do Packing List com os volumes.</li>
+                    </ul>
+                </div>
+                <div class="bg-stone-50 rounded-lg shadow-inner border border-stone-200 overflow-hidden p-6">
+                    <h3 class="text-xl font-semibold text-amber-700">3. Tratativa de Divergências</h3>
+                     <p class="text-stone-600">Em caso de divergência documental ou física:</p>
+                     <ul class="mt-2 text-stone-600 list-disc list-inside space-y-1">
+                        <li>Notifique imediatamente o setor de Comércio Exterior.</li>
+                        <li>Registre a ocorrência com fotos e relatórios.</li>
+                        <li>Se a divergência for nos produtos, comunique imediatamente o Auditor de Estoque e o Supervisor de Logística.</li>
+                    </ul>
+                    <h4 class="text-lg font-semibold text-stone-800 mt-4">Em caso de avaria:</h4>
+                    <ul class="mt-2 text-stone-600 list-disc list-inside space-y-1">
+                        <li>Identifique o número do container, SKU, quantidade e descreva o ocorrido no grupo de comunicação.</li>
+                        <li>Registre com fotos e filmagem.</li>
+                        <li>Transfira para a área de descarte do depósito e solicite baixa, descrevendo o motivo.</li>
+                    </ul>
+                </div>
+                 <div class="bg-stone-50 rounded-lg shadow-inner border border-stone-200 overflow-hidden p-6">
+                    <h3 class="text-xl font-semibold text-amber-700">4. Prosseguimento com Recebimento</h3>
+                     <p class="text-stone-600">Se documentos e produtos estiverem em conformidade:</p>
+                     <ul class="mt-2 text-stone-600 list-disc list-inside space-y-1">
+                        <li>Registre o recebimento no sistema backoffice.</li>
+                        <li>Os produtos serão lançados no depósito INB.AT.</li>
+                        <li>Movimente fisicamente e no sistema para o destino final de armazenagem.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-stone-800 text-white">
+        <div class="container mx-auto py-4 px-4 sm:px-6 lg:px-8 text-center text-sm">
+            <p>&copy; 2025 | Guia de Procedimentos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
